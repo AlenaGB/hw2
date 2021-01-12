@@ -14,4 +14,14 @@ month = int(input("Enter number of month: "))
 while month <= 0 or month > 12:
     month = int(input(f"There is no month with number {month}. Try again: "))
 else:
-    print("month number {} is {}".format(month, mDict[month]))
+    print("month number {} is {}".format(month, mList[month]))
+
+# задача на время года
+seasons = {'winter': (1, 2, 12), 'spring': (3, 4, 5), 'summer' : (6, 7, 8),'autumn': (9, 10, 11)}
+for key in seasons.keys():
+    if month in seasons[key]:
+        print(f"It is {key}")
+
+# время года со списком из рабора дз
+season = ['winter', 'spring', 'summer', 'autumn', 'winter']
+print(f'It is {season[int(month) // 3]}')
